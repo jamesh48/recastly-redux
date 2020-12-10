@@ -9,3 +9,7 @@ import exampleVideoData from '../data/exampleVideoData.js';
   //currentVideo, videos
 //Search ->
   //value
+
+let store = createStore(rootReducer, exampleVideoData, applyMiddleware(thunk));
+
+export default store;
