@@ -13,7 +13,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 // let store = createStore(rootReducer, exampleVideoData, applyMiddleware(thunk));
 
-const store = createStore(rootReducer, {currentVideo: null, videoList: exampleVideoData}, applyMiddleware(thunk));
+const store = createStore(rootReducer, {currentVideo: exampleVideoData[0], videoList: exampleVideoData}, applyMiddleware(thunk));
 
 // const store = createStore(rootReducer, {currentVideo: null, videoList: exampleVideoData}, composeWithDevTools(
 //   applyMiddleware(thunk)

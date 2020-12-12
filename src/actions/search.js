@@ -12,10 +12,12 @@ var handleVideoSearch = (q) => {
   //searchYoutube function- inputs: (options object {key, q, max = 5}, callback)
   //https://codepen.io/stowball/post/a-dummy-s-guide-to-redux-and-thunk-in-react
   return (dispatch) => {
-    let result = [];
-    searchYouTube({key: YOUTUBE_API_KEY, query: q, max: 5}, (items) => result = items);
-    dispatch(changeVideo(result[0]));
-    dispatch(changeVideoList(result));
+
+    searchYouTube({key: YOUTUBE_API_KEY, query: q, max: 5}, function(items) {
+      dispatch(changeVideo(items[0]));
+      dispatch(changeVideoList(items));
+    });
+
   };
 };
 
