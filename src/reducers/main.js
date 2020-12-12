@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
 import currentVideo from './currentVideo.js';
 import videoList from './videoList.js';
+import clicked from './autoplay.js';
+
 
 var rootReducer = combineReducers({
   currentVideo,
-  videoList
+  videoList,
+  clicked
 });
 
 // var rootReducer = (combineReducers) => {

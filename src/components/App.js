@@ -5,6 +5,7 @@ import Search from './Search.js';
 import SearchContainer from '../containers/SearchContainer.js';
 import VideoListContainer from '../containers/VideoListContainer.js';
 import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
+import AutoPlayButtonContainer from '../containers/AutoPlayButtonContainer.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -53,7 +54,7 @@ class App extends React.Component {
         <div className="row">
           <div className="col-md-7">
             <VideoPlayerContainer /* video={this.state.currentVideo} *//>
-            <button>autoplay</button>
+            <AutoPlayButtonContainer/>
           </div>
           <div className="col-md-5">
             <VideoListContainer

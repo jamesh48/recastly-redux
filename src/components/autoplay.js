@@ -1,8 +1,16 @@
 import React from 'react';
 
-class AutoPlayButton extends React.Component {
-  constructor (props) {
-    super(props);
+var AutoPlayButton = ({clicked, handleAutoPlayButtonClick}) => {
+  let indicator;
+  if (clicked === false) {
+    indicator = true;
+  } else {
+    indicator = false;
   }
 
-}
+  return <div>
+    <button onClick={() => handleAutoPlayButtonClick(indicator)} style={{color: 'white', backgroundColor: clicked === true ? 'red' : 'green'}}>Autoplay</button>
+  </div>;
+};
+
+export default AutoPlayButton;
