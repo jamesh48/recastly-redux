@@ -4,7 +4,7 @@ import changeVideo from './../actions/currentVideo.js';
 
 
 const mapStateToProps = state => ({videos: state.videoList});
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
 
   return {
     handleVideoListEntryTitleClick: (video) => dispatch(changeVideo(video))
