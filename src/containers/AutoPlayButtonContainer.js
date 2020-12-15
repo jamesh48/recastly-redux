@@ -5,7 +5,7 @@ import changeClick from '../actions/clickStatus.js';
 const mapStateToProps = state => ({clicked: state.clicked});
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleAutoPlayButtonClick: (indicator) => dispatch(changeClick(indicator))
+    handleAutoPlayButtonClick: () => dispatch(changeClick())
   };
 };
 

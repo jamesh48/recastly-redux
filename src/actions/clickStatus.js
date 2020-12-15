@@ -1,6 +1,6 @@
-var changeClick = (indicator) => ({
+var changeClick = () => ({
   type: 'TOGGLE_CLICK',
-  clicked: indicator
+  // clicked: false
 });
 
 export default changeClick;

@@ -1,15 +1,8 @@
 import React from 'react';
 
-var AutoPlayButton = ({clicked, handleAutoPlayButtonClick}) => {
-  let indicator;
-  if (clicked === false) {
-    indicator = true;
-  } else {
-    indicator = false;
-  }
-
+var AutoPlayButton = ({handleAutoPlayButtonClick, clicked}) => {
   return <div>
-    <button onClick={() => handleAutoPlayButtonClick(indicator)} style={{color: 'white', backgroundColor: clicked === true ? 'red' : 'green'}}>Autoplay</button>
+    <button onClick={() => handleAutoPlayButtonClick()} style={{color: 'white', backgroundColor: clicked.clicked === true ? 'green' : 'red'}}>Autoplay</button>
   </div>;
 };
 
